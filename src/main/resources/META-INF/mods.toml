@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="All Rights Reserved"
+#issueTrackerURL="https://to.do.com"
+[[mods]]
+modId="azcray"
+version="${file.jarVersion}"
+displayName="Azcray Core"
+#updateJSONURL="https://to.do.com"
+#displayURL="https://to.do.com"
+logoFile="to.do.png"
+authors="SnakerBone"
+description='Core Functionality For Azcray.'
+[[dependencies.azcray]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.azcray]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5]"
+    ordering="NONE"
+    side="BOTH"
