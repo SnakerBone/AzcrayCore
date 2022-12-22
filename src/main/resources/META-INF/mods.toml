@@ -1,14 +1,14 @@
 modLoader="javafml"
 loaderVersion="[36,)"
 license="All Rights Reserved"
-#issueTrackerURL="https://to.do.com"
+issueTrackerURL="https://github.com/SnakerBone/AzcrayCore/issues"
 [[mods]]
 modId="azcray"
 version="${file.jarVersion}"
 displayName="Azcray Core"
-#updateJSONURL="https://to.do.com"
-#displayURL="https://to.do.com"
-logoFile="to.do.png"
+updateJSONURL="https://github.com/SnakerBone/AzcrayCore/blob/main/updates.json"
+displayURL="https://github.com/SnakerBone/AzcrayCore"
+logoFile="icon.png"
 authors="SnakerBone"
 description='Core Functionality For Azcray.'
 [[dependencies.azcray]]
