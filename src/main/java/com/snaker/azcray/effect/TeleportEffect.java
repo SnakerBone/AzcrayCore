@@ -25,7 +25,7 @@ public class TeleportEffect extends Effect {
                 Double x_rand = posX + (livingEntity.getRandom().nextDouble() - 0.5D) * 16.0D;
                 Double y_rand = MathHelper.clamp(livingEntity.getY() +
                                 (double)(livingEntity.getRandom().nextInt(16) - 8), 0.0D,
-                                    (livingEntity.level.getHeight() - 1));
+                                    (livingEntity.level.getHeight() - 1)); // do not teleport player out of world boundaries
                 Double z_rand = posZ + (livingEntity.getRandom().nextDouble() - 0.5D) * 16.0D;
 
                 BlockPos finalPos = new BlockPos(x_rand, y_rand, z_rand);
