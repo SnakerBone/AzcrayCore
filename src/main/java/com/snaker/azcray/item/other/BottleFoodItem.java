@@ -1,4 +1,4 @@
-package com.snaker.azcray.item;
+package com.snaker.azcray.item.other;
 
 import com.snaker.azcray.init.ModEffectsInit;
 import net.minecraft.item.Food;
@@ -9,8 +9,8 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 
 public class BottleFoodItem extends HoneyBottleItem {
-    public BottleFoodItem(Properties pProperties) {
-        super(pProperties);
+    public BottleFoodItem(Properties properties) {
+        super(properties);
     }
 
     // bottled food overrides
@@ -51,7 +51,7 @@ public class BottleFoodItem extends HoneyBottleItem {
                         .effect(() -> new EffectInstance(Effects.DOLPHINS_GRACE, 120, 0), 1)
                         .effect(() -> new EffectInstance(Effects.BAD_OMEN, 120, 0), 1)
                         .effect(() -> new EffectInstance(Effects.HERO_OF_THE_VILLAGE, 120, 0), 1)
-                        .effect(() -> new EffectInstance(ModEffectsInit.TP_SICKNESS.get(), 120, 0), 1)
+                        .effect(() -> new EffectInstance(ModEffectsInit.TELEPORT.get(), 120, 0), 1)
                         .build()
                 )
         );

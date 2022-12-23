@@ -1,7 +1,8 @@
 package com.snaker.azcray;
 
 import com.snaker.azcray.init.ModEffectsInit;
-import com.snaker.azcray.init.VanillaOverrideInit;
+import com.snaker.azcray.init.ModOverrideInit;
+import com.snaker.azcray.item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -15,7 +16,9 @@ public class AzcrayMod
     public AzcrayMod() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        VanillaOverrideInit.VANILLA_FOOD_OVERRIDE.register(eventBus); // register funny food overrides
+        ModItems.ITEMS.register(eventBus);
+
+        ModOverrideInit.MINECRAFT_FOOD_OVERRIDE.register(eventBus); // register funny food overrides
         ModEffectsInit.EFFECTS.register(eventBus); // register mod effects
 
         MinecraftForge.EVENT_BUS.register(this);

@@ -1,21 +1,20 @@
-package com.snaker.azcray.item;
+package com.snaker.azcray.item.other;
 
 import com.snaker.azcray.init.ModEffectsInit;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.SoupItem;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 
-public class SoupFoodItem extends SoupItem {
-    public SoupFoodItem(Properties pProperties) {
-        super(pProperties);
+public class NormalFoodItem extends Item {
+    public NormalFoodItem(Properties properties) {
+        super(properties);
     }
 
-    // soup food overrides
+    // normal food overrides
 
-    public SoupFoodItem() {
+    public NormalFoodItem() {
         super(new Item.Properties()
                 .tab(ItemGroup.TAB_FOOD)
                 .food(new Food.Builder()
@@ -51,7 +50,7 @@ public class SoupFoodItem extends SoupItem {
                         .effect(() -> new EffectInstance(Effects.DOLPHINS_GRACE, 250, 0), 1)
                         .effect(() -> new EffectInstance(Effects.BAD_OMEN, 250, 0), 1)
                         .effect(() -> new EffectInstance(Effects.HERO_OF_THE_VILLAGE, 250, 0), 1)
-                        .effect(() -> new EffectInstance(ModEffectsInit.TP_SICKNESS.get(), 250, 0), 1)
+                        .effect(() -> new EffectInstance(ModEffectsInit.TELEPORT.get(), 250, 0), 1)
                         .build()
                 )
         );

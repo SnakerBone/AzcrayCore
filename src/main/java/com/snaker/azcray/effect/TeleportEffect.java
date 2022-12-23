@@ -9,8 +9,8 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 
-public class TeleportSicknessEffect extends Effect {
-    public TeleportSicknessEffect(EffectType category, int color) {
+public class TeleportEffect extends Effect {
+    public TeleportEffect(EffectType category, int color) {
         super(category, color);
     }
 
