@@ -21,7 +21,7 @@ public class Azcray
 
         ModItems.ITEMS.register(eventBus);
 
-        ModOverrideInit.MINECRAFT_WRITTEN_BOOK_OVERRIDE.register(eventBus);
+        ModOverrideInit.MINECRAFT_WRITTEN_BOOK_OVERRIDE.register(eventBus); // register book overrides
         ModOverrideInit.MINECRAFT_FOOD_OVERRIDE.register(eventBus); // register funny food overrides
         ModEffectsInit.EFFECTS.register(eventBus); // register mod effects
 
