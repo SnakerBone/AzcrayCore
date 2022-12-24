@@ -1,6 +1,6 @@
 modLoader="javafml"
 loaderVersion="[36,)"
-license="All Rights Reserved"
+license="MIT"
 issueTrackerURL="https://github.com/SnakerBone/AzcrayCore/issues"
 [[mods]]
 modId="azcray"
@@ -20,6 +20,6 @@ description='Core Functionality For Azcray.'
 [[dependencies.azcray]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.5]"
+    versionRange="[1.16,1.17]"
     ordering="NONE"
     side="BOTH"
