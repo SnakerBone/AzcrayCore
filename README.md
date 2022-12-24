@@ -1,4 +1,4 @@
-## Azcray Core (WIP)\
+## Azcray Core (WIP)\n
 Core Functionality For Azcray\
 This mod completely overrides and disables many vanilla minecraft mechanics with a "crazy" twist, aiming to force the player to use mods\
 ---
