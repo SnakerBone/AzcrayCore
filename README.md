@@ -1,6 +1,7 @@
 ### Azcray Core (WIP) <br />
 
 Core Functionality For Azcray <br />
+
 This mod completely overrides and disables many vanilla minecraft mechanics with a "crazy" twist, aiming to force the player to use mods <br />
 Note: This mod is not meant to be "High Quality", I am making this mod to absolutely munt minecraft (the gameplay) to its limit <br />
 ## Features (WIP) <br />
