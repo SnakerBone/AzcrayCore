@@ -15,7 +15,7 @@ public class NormalFoodItem extends Item {
     // normal food overrides
 
     public NormalFoodItem() {
-        super(new Item.Properties()
+        super(new Properties()
                 .tab(ItemGroup.TAB_FOOD)
                 .food(new Food.Builder()
                         .effect(() -> new EffectInstance(Effects.MOVEMENT_SPEED, 250, 0), 1)

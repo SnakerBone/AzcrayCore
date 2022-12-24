@@ -16,7 +16,7 @@ public class BottleFoodItem extends HoneyBottleItem {
     // bottled food overrides
 
     public BottleFoodItem() {
-        super(new Item.Properties()
+        super(new Properties()
                 .tab(ItemGroup.TAB_FOOD)
                 .food(new Food.Builder()
                         .effect(() -> new EffectInstance(Effects.MOVEMENT_SPEED, 120, 0), 1)

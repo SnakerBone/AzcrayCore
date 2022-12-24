@@ -16,7 +16,7 @@ public class SoupFoodItem extends SoupItem {
     // soup food overrides
 
     public SoupFoodItem() {
-        super(new Item.Properties()
+        super(new Properties()
                 .tab(ItemGroup.TAB_FOOD)
                 .food(new Food.Builder()
                         .effect(() -> new EffectInstance(Effects.MOVEMENT_SPEED, 250, 0), 1)

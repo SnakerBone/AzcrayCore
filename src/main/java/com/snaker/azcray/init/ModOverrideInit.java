@@ -1,18 +1,22 @@
 package com.snaker.azcray.init;
 
-import com.snaker.azcray.item.other.BottleFoodItem;
-import com.snaker.azcray.item.other.NormalFoodItem;
-import com.snaker.azcray.item.other.SoupFoodItem;
+import com.snaker.azcray.item.other.*;
 import net.minecraft.item.Item;
+import net.minecraft.item.WritableBookItem;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class ModOverrideInit {
+public class ModOverrideInit extends Item {
+    public ModOverrideInit(Properties properties) {
+        super(properties);
+    }
 
     // register
 
     public static final DeferredRegister<Item> MINECRAFT_FOOD_OVERRIDE = DeferredRegister.create(ForgeRegistries.ITEMS, "minecraft");
+
+    public static final DeferredRegister<Item> MINECRAFT_WRITTEN_BOOK_OVERRIDE = DeferredRegister.create(ForgeRegistries.ITEMS, "minecraft");
 
     // normal food items
 
@@ -60,4 +64,9 @@ public class ModOverrideInit {
     public static final RegistryObject<Item> MUSHROOM_STEW = MINECRAFT_FOOD_OVERRIDE.register("mushroom_stew", SoupFoodItem::new);
     public static final RegistryObject<Item> RABBIT_STEW = MINECRAFT_FOOD_OVERRIDE.register("rabbit_stew", SoupFoodItem::new);
     public static final RegistryObject<Item> SUSPICIOUS_STEW = MINECRAFT_FOOD_OVERRIDE.register("suspicious_stew", SoupFoodItem::new);
+
+    // written book items
+
+    public static final RegistryObject<Item> WRITTEN_BOOK = MINECRAFT_WRITTEN_BOOK_OVERRIDE.register("written_book", WrittenBookModItem::new);
+    public static final RegistryObject<Item> WRITABLE_BOOK = MINECRAFT_WRITTEN_BOOK_OVERRIDE.register("writable_book", WritableBookModItem::new);
 }
