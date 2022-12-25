@@ -4,6 +4,8 @@
 
   "item.minecraft.written_book": "Welcome To Azcray",
 
+  "gui.azcray.notification.do_not_the_creature": "§l§5DO NOT THE CREATURE!",
+
   "itemGroup.azcray_main_tab": "Azcray",
 
   "effect.azcray.teleport": "Teleport"

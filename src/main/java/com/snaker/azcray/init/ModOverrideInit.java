@@ -1,8 +1,7 @@
 package com.snaker.azcray.init;
 
-import com.snaker.azcray.item.other.*;
+import com.snaker.azcray.item.custom.*;
 import net.minecraft.item.Item;
-import net.minecraft.item.WritableBookItem;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -14,59 +13,67 @@ public class ModOverrideInit extends Item {
 
     // register
 
-    public static final DeferredRegister<Item> MINECRAFT_FOOD_OVERRIDE = DeferredRegister.create(ForgeRegistries.ITEMS, "minecraft");
-
-    public static final DeferredRegister<Item> MINECRAFT_WRITTEN_BOOK_OVERRIDE = DeferredRegister.create(ForgeRegistries.ITEMS, "minecraft");
+    public static final DeferredRegister<Item> MINECRAFT_ITEM = DeferredRegister.create(ForgeRegistries.ITEMS, "minecraft");
+    
 
     // normal food items
 
-    public static final RegistryObject<Item> APPLE = MINECRAFT_FOOD_OVERRIDE.register("apple", NormalFoodItem::new);
-    public static final RegistryObject<Item> BREAD = MINECRAFT_FOOD_OVERRIDE.register("bread", NormalFoodItem::new);
-    public static final RegistryObject<Item> RAW_PORKCHOP = MINECRAFT_FOOD_OVERRIDE.register("porkchop", NormalFoodItem::new);
-    public static final RegistryObject<Item> COOKED_PORKCHOP = MINECRAFT_FOOD_OVERRIDE.register("cooked_porkchop", NormalFoodItem::new);
-    public static final RegistryObject<Item> GOLDEN_APPLE = MINECRAFT_FOOD_OVERRIDE.register("golden_apple", NormalFoodItem::new);
-    public static final RegistryObject<Item> ENCHANTED_GOLDEN_APPLE = MINECRAFT_FOOD_OVERRIDE.register("enchanted_golden_apple", NormalFoodItem::new);
-    public static final RegistryObject<Item> RAW_COD = MINECRAFT_FOOD_OVERRIDE.register("cod", NormalFoodItem::new);
-    public static final RegistryObject<Item> RAW_SALMON = MINECRAFT_FOOD_OVERRIDE.register("salmon", NormalFoodItem::new);
-    public static final RegistryObject<Item> TROPICAL_FISH = MINECRAFT_FOOD_OVERRIDE.register("tropical_fish", NormalFoodItem::new);
-    public static final RegistryObject<Item> PUFFERFISH = MINECRAFT_FOOD_OVERRIDE.register("pufferfish", NormalFoodItem::new);
-    public static final RegistryObject<Item> COOKED_COD = MINECRAFT_FOOD_OVERRIDE.register("cooked_cod", NormalFoodItem::new);
-    public static final RegistryObject<Item> COOKED_SALMON = MINECRAFT_FOOD_OVERRIDE.register("cooked_salmon", NormalFoodItem::new);
-    public static final RegistryObject<Item> COOKIE = MINECRAFT_FOOD_OVERRIDE.register("cookie", NormalFoodItem::new);
-    public static final RegistryObject<Item> MELON_SLICE = MINECRAFT_FOOD_OVERRIDE.register("melon_slice", NormalFoodItem::new);
-    public static final RegistryObject<Item> DRIED_KELP = MINECRAFT_FOOD_OVERRIDE.register("dried_kelp", NormalFoodItem::new);
-    public static final RegistryObject<Item> RAW_BEEF = MINECRAFT_FOOD_OVERRIDE.register("beef", NormalFoodItem::new);
-    public static final RegistryObject<Item> STEAK = MINECRAFT_FOOD_OVERRIDE.register("cooked_beef", NormalFoodItem::new);
-    public static final RegistryObject<Item> RAW_CHICKEN = MINECRAFT_FOOD_OVERRIDE.register("chicken", NormalFoodItem::new);
-    public static final RegistryObject<Item> COOKED_CHICKEN = MINECRAFT_FOOD_OVERRIDE.register("cooked_chicken", NormalFoodItem::new);
-    public static final RegistryObject<Item> ROTTEN_FLESH = MINECRAFT_FOOD_OVERRIDE.register("rotten_flesh", NormalFoodItem::new);
-    public static final RegistryObject<Item> CARROT = MINECRAFT_FOOD_OVERRIDE.register("carrot", NormalFoodItem::new);
-    public static final RegistryObject<Item> POTATO = MINECRAFT_FOOD_OVERRIDE.register("potato", NormalFoodItem::new);
-    public static final RegistryObject<Item> BAKED_POTATO = MINECRAFT_FOOD_OVERRIDE.register("baked_potato", NormalFoodItem::new);
-    public static final RegistryObject<Item> POISONOUS_POTATO = MINECRAFT_FOOD_OVERRIDE.register("poisonous_potato", NormalFoodItem::new);
-    public static final RegistryObject<Item> GOLDEN_CARROT = MINECRAFT_FOOD_OVERRIDE.register("golden_carrot", NormalFoodItem::new);
-    public static final RegistryObject<Item> PUMPKIN_PIE = MINECRAFT_FOOD_OVERRIDE.register("pumpkin_pie", NormalFoodItem::new);
-    public static final RegistryObject<Item> RAW_RABBIT = MINECRAFT_FOOD_OVERRIDE.register("rabbit", NormalFoodItem::new);
-    public static final RegistryObject<Item> COOKED_RABBIT = MINECRAFT_FOOD_OVERRIDE.register("cooked_rabbit", NormalFoodItem::new);
-    public static final RegistryObject<Item> RAW_MUTTON = MINECRAFT_FOOD_OVERRIDE.register("mutton", NormalFoodItem::new);
-    public static final RegistryObject<Item> COOKED_MUTTON = MINECRAFT_FOOD_OVERRIDE.register("cooked_mutton", NormalFoodItem::new);
-    public static final RegistryObject<Item> CHORUS_FRUIT = MINECRAFT_FOOD_OVERRIDE.register("chorus_fruit", NormalFoodItem::new);
-    public static final RegistryObject<Item> BEETROOT = MINECRAFT_FOOD_OVERRIDE.register("beetroot", NormalFoodItem::new);
-    public static final RegistryObject<Item> SWEET_BERRIES = MINECRAFT_FOOD_OVERRIDE.register("sweet_berries", NormalFoodItem::new);
+    public static final RegistryObject<Item> APPLE = MINECRAFT_ITEM.register("apple", NormalFoodModItem::new);
+    public static final RegistryObject<Item> BREAD = MINECRAFT_ITEM.register("bread", NormalFoodModItem::new);
+    public static final RegistryObject<Item> RAW_PORKCHOP = MINECRAFT_ITEM.register("porkchop", NormalFoodModItem::new);
+    public static final RegistryObject<Item> COOKED_PORKCHOP = MINECRAFT_ITEM.register("cooked_porkchop", NormalFoodModItem::new);
+    public static final RegistryObject<Item> GOLDEN_APPLE = MINECRAFT_ITEM.register("golden_apple", GoldenAppleModItem::new);
+    public static final RegistryObject<Item> ENCHANTED_GOLDEN_APPLE = MINECRAFT_ITEM.register("enchanted_golden_apple", EnchantedGoldenAppleModItem::new);
+    public static final RegistryObject<Item> RAW_COD = MINECRAFT_ITEM.register("cod", NormalFoodModItem::new);
+    public static final RegistryObject<Item> RAW_SALMON = MINECRAFT_ITEM.register("salmon", NormalFoodModItem::new);
+    public static final RegistryObject<Item> TROPICAL_FISH = MINECRAFT_ITEM.register("tropical_fish", NormalFoodModItem::new);
+    public static final RegistryObject<Item> PUFFERFISH = MINECRAFT_ITEM.register("pufferfish", NormalFoodModItem::new);
+    public static final RegistryObject<Item> COOKED_COD = MINECRAFT_ITEM.register("cooked_cod", NormalFoodModItem::new);
+    public static final RegistryObject<Item> COOKED_SALMON = MINECRAFT_ITEM.register("cooked_salmon", NormalFoodModItem::new);
+    public static final RegistryObject<Item> COOKIE = MINECRAFT_ITEM.register("cookie", NormalFoodModItem::new);
+    public static final RegistryObject<Item> MELON_SLICE = MINECRAFT_ITEM.register("melon_slice", NormalFoodModItem::new);
+    public static final RegistryObject<Item> DRIED_KELP = MINECRAFT_ITEM.register("dried_kelp", DriedKelpFoodModItem::new);
+    public static final RegistryObject<Item> RAW_BEEF = MINECRAFT_ITEM.register("beef", NormalFoodModItem::new);
+    public static final RegistryObject<Item> STEAK = MINECRAFT_ITEM.register("cooked_beef", NormalFoodModItem::new);
+    public static final RegistryObject<Item> RAW_CHICKEN = MINECRAFT_ITEM.register("chicken", NormalFoodModItem::new);
+    public static final RegistryObject<Item> COOKED_CHICKEN = MINECRAFT_ITEM.register("cooked_chicken", NormalFoodModItem::new);
+    public static final RegistryObject<Item> ROTTEN_FLESH = MINECRAFT_ITEM.register("rotten_flesh", NormalFoodModItem::new);
+    public static final RegistryObject<Item> CARROT = MINECRAFT_ITEM.register("carrot", NormalFoodModItem::new);
+    public static final RegistryObject<Item> POTATO = MINECRAFT_ITEM.register("potato", NormalFoodModItem::new);
+    public static final RegistryObject<Item> BAKED_POTATO = MINECRAFT_ITEM.register("baked_potato", NormalFoodModItem::new);
+    public static final RegistryObject<Item> POISONOUS_POTATO = MINECRAFT_ITEM.register("poisonous_potato", NormalFoodModItem::new);
+    public static final RegistryObject<Item> GOLDEN_CARROT = MINECRAFT_ITEM.register("golden_carrot", NormalFoodModItem::new);
+    public static final RegistryObject<Item> PUMPKIN_PIE = MINECRAFT_ITEM.register("pumpkin_pie", NormalFoodModItem::new);
+    public static final RegistryObject<Item> RAW_RABBIT = MINECRAFT_ITEM.register("rabbit", NormalFoodModItem::new);
+    public static final RegistryObject<Item> COOKED_RABBIT = MINECRAFT_ITEM.register("cooked_rabbit", NormalFoodModItem::new);
+    public static final RegistryObject<Item> RAW_MUTTON = MINECRAFT_ITEM.register("mutton", NormalFoodModItem::new);
+    public static final RegistryObject<Item> COOKED_MUTTON = MINECRAFT_ITEM.register("cooked_mutton", NormalFoodModItem::new);
+    public static final RegistryObject<Item> CHORUS_FRUIT = MINECRAFT_ITEM.register("chorus_fruit", ChorusFruitModItem::new);
+    public static final RegistryObject<Item> BEETROOT = MINECRAFT_ITEM.register("beetroot", NormalFoodModItem::new);
+    public static final RegistryObject<Item> SWEET_BERRIES = MINECRAFT_ITEM.register("sweet_berries", NormalFoodModItem::new);
 
     // bottled food items
 
-    public static final RegistryObject<Item> HONEY_BOTTLE = MINECRAFT_FOOD_OVERRIDE.register("honey_bottle", BottleFoodItem::new);
+    public static final RegistryObject<Item> HONEY_BOTTLE = MINECRAFT_ITEM.register("honey_bottle", BottleFoodModItem::new);
 
     // soup food items
 
-    public static final RegistryObject<Item> BEETROOT_SOUP = MINECRAFT_FOOD_OVERRIDE.register("beetroot_soup", SoupFoodItem::new);
-    public static final RegistryObject<Item> MUSHROOM_STEW = MINECRAFT_FOOD_OVERRIDE.register("mushroom_stew", SoupFoodItem::new);
-    public static final RegistryObject<Item> RABBIT_STEW = MINECRAFT_FOOD_OVERRIDE.register("rabbit_stew", SoupFoodItem::new);
-    public static final RegistryObject<Item> SUSPICIOUS_STEW = MINECRAFT_FOOD_OVERRIDE.register("suspicious_stew", SoupFoodItem::new);
+    public static final RegistryObject<Item> BEETROOT_SOUP = MINECRAFT_ITEM.register("beetroot_soup", SoupFoodModItem::new);
+    public static final RegistryObject<Item> MUSHROOM_STEW = MINECRAFT_ITEM.register("mushroom_stew", SoupFoodModItem::new);
+    public static final RegistryObject<Item> RABBIT_STEW = MINECRAFT_ITEM.register("rabbit_stew", SoupFoodModItem::new);
+    public static final RegistryObject<Item> SUSPICIOUS_STEW = MINECRAFT_ITEM.register("suspicious_stew", SoupFoodModItem::new);
 
     // written book items
 
-    public static final RegistryObject<Item> WRITTEN_BOOK = MINECRAFT_WRITTEN_BOOK_OVERRIDE.register("written_book", WrittenBookModItem::new);
-    public static final RegistryObject<Item> WRITABLE_BOOK = MINECRAFT_WRITTEN_BOOK_OVERRIDE.register("writable_book", WritableBookModItem::new);
+    public static final RegistryObject<Item> WRITTEN_BOOK = MINECRAFT_ITEM.register("written_book", WrittenBookModItem::new);
+    public static final RegistryObject<Item> WRITABLE_BOOK = MINECRAFT_ITEM.register("writable_book", WritableBookModItem::new);
+    
+    // weapon items (excluding netherite)
+
+    public static final RegistryObject<Item> WOODEN_SWORD = MINECRAFT_ITEM.register("wooden_sword", SwordModItem::new);
+    public static final RegistryObject<Item> STONE_SWORD = MINECRAFT_ITEM.register("stone_sword", SwordModItem::new);
+    public static final RegistryObject<Item> IRON_SWORD = MINECRAFT_ITEM.register("iron_sword", SwordModItem::new);
+    public static final RegistryObject<Item> GOLD_SWORD = MINECRAFT_ITEM.register("golden_sword", SwordModItem::new);
+    public static final RegistryObject<Item> DIAMOND_SWORD = MINECRAFT_ITEM.register("diamond_sword", SwordModItem::new);
+
 }

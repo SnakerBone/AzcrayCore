@@ -1,13 +1,8 @@
-package com.snaker.azcray.item.other;
+package com.snaker.azcray.item.custom;
 
 import net.minecraft.item.WrittenBookItem;
 
 public class WrittenBookModItem extends WrittenBookItem {
-    public WrittenBookModItem(Properties properties) {
-        super(properties);
-    }
-
-    // written book overrides
 
     public WrittenBookModItem() {
         super(new Properties());

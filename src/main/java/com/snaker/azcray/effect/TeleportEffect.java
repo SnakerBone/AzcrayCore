@@ -8,6 +8,7 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
+import org.lwjgl.system.CallbackI;
 
 public class TeleportEffect extends Effect {
     public TeleportEffect(EffectType category, int color) {
@@ -15,36 +16,38 @@ public class TeleportEffect extends Effect {
     }
 
     @Override
-    public void applyEffectTick(LivingEntity livingEntity, int amplifier) {
-        if(livingEntity.tickCount % 20 == 0) {
-            if (!livingEntity.level.isClientSide()) {
+    public void performEffect(LivingEntity livingEntity, int amplifier) {
+        if(livingEntity.ticksExisted % 10 == 0) {
+            if (!livingEntity.world.isRemote) {
 
-                int posX = livingEntity.blockPosition().getX();
-                int posZ = livingEntity.blockPosition().getZ();
+                Double posX = livingEntity.getPosX();
+                Double posY = livingEntity.getPosY();
+                Double posZ = livingEntity.getPosZ();
 
-                Double x_rand = posX + (livingEntity.getRandom().nextDouble() - 0.5D) * 16.0D;
-                Double y_rand = MathHelper.clamp(livingEntity.getY() +
-                                (double)(livingEntity.getRandom().nextInt(16) - 8), 0.0D,
-                                    (livingEntity.level.getHeight() - 1)); // do not teleport player out of world boundaries
-                Double z_rand = posZ + (livingEntity.getRandom().nextDouble() - 0.5D) * 16.0D;
+                // do not teleport player out of world boundaries
+
+                Double x_rand = posX + (livingEntity.getRNG().nextDouble() - 0.5D) * 16.0D;
+                Double y_rand = MathHelper.clamp(posY +
+                        (livingEntity.getRNG().nextInt(16) - 8), 0.0D,
+                        (livingEntity.world.getHeight() - 1));
+                Double z_rand = posZ + (livingEntity.getRNG().nextDouble() - 0.5D) * 16.0D;
 
                 BlockPos finalPos = new BlockPos(x_rand, y_rand, z_rand);
 
                 // only teleport player if block is minecraft:air. if block is not minecraft:air wait until next run
 
-                if (livingEntity.level.getBlockState(finalPos).getBlock() == Blocks.AIR) {
-                    livingEntity.level.playSound(null, x_rand, y_rand, z_rand,
-                            SoundEvents.FOX_TELEPORT, SoundCategory.PLAYERS, 1f, 1f);
-                    livingEntity.setDeltaMovement(0, 0, 0);
-                    livingEntity.teleportTo(x_rand, y_rand, z_rand);
+                if (livingEntity.world.getBlockState(finalPos).getBlock() == Blocks.AIR) {
+                    livingEntity.world.playSound(null, x_rand, y_rand, z_rand,
+                            SoundEvents.ENTITY_FOX_TELEPORT, SoundCategory.PLAYERS, 1f, 1f);
+                    livingEntity.attemptTeleport(x_rand, y_rand, z_rand, true);
                 }
             }
-            super.applyEffectTick(livingEntity, amplifier);
+            super.performEffect(livingEntity, amplifier);
         }
     }
 
     @Override
-    public boolean isDurationEffectTick(int duration, int amplifier) {
+    public boolean isReady(int duration, int amplifier) {
         return true;
     }
 }

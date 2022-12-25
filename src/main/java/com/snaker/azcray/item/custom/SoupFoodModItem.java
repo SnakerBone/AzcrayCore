@@ -1,35 +1,29 @@
-package com.snaker.azcray.item.other;
+package com.snaker.azcray.item.custom;
 
 import com.snaker.azcray.init.ModEffectsInit;
 import net.minecraft.item.Food;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.SoupItem;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 
-public class SoupFoodItem extends SoupItem {
-    public SoupFoodItem(Properties properties) {
-        super(properties);
-    }
+public class SoupFoodModItem extends SoupItem {
 
-    // soup food overrides
-
-    public SoupFoodItem() {
+    public SoupFoodModItem() {
         super(new Properties()
-                .tab(ItemGroup.TAB_FOOD)
+                .group(ItemGroup.FOOD)
                 .food(new Food.Builder()
-                        .effect(() -> new EffectInstance(Effects.MOVEMENT_SPEED, 250, 0), 1)
-                        .effect(() -> new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 250, 0), 1)
-                        .effect(() -> new EffectInstance(Effects.DIG_SPEED, 250, 0), 1)
-                        .effect(() -> new EffectInstance(Effects.DIG_SLOWDOWN, 250, 0), 1)
-                        .effect(() -> new EffectInstance(Effects.DAMAGE_BOOST, 250, 0), 1)
-                        .effect(() -> new EffectInstance(Effects.HEAL, 250, 0), 1)
-                        .effect(() -> new EffectInstance(Effects.HARM, 250, 0), 1)
-                        .effect(() -> new EffectInstance(Effects.JUMP, 250, 0), 1)
-                        .effect(() -> new EffectInstance(Effects.CONFUSION, 250, 0), 1)
+                        .effect(() -> new EffectInstance(Effects.SPEED, 250, 0), 1)
+                        .effect(() -> new EffectInstance(Effects.SLOWNESS, 250, 0), 1)
+                        .effect(() -> new EffectInstance(Effects.HASTE, 250, 0), 1)
+                        .effect(() -> new EffectInstance(Effects.MINING_FATIGUE, 250, 0), 1)
+                        .effect(() -> new EffectInstance(Effects.STRENGTH, 250, 0), 1)
+                        .effect(() -> new EffectInstance(Effects.INSTANT_HEALTH, 250, 0), 1)
+                        .effect(() -> new EffectInstance(Effects.INSTANT_DAMAGE, 250, 0), 1)
+                        .effect(() -> new EffectInstance(Effects.JUMP_BOOST, 250, 0), 1)
+                        .effect(() -> new EffectInstance(Effects.NAUSEA, 250, 0), 1)
                         .effect(() -> new EffectInstance(Effects.REGENERATION, 250, 0), 1)
-                        .effect(() -> new EffectInstance(Effects.DAMAGE_RESISTANCE, 250, 0), 1)
+                        .effect(() -> new EffectInstance(Effects.RESISTANCE, 250, 0), 1)
                         .effect(() -> new EffectInstance(Effects.FIRE_RESISTANCE, 250, 0), 1)
                         .effect(() -> new EffectInstance(Effects.WATER_BREATHING, 250, 0), 1)
                         .effect(() -> new EffectInstance(Effects.INVISIBILITY, 250, 0), 1)

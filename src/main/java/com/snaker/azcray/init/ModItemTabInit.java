@@ -8,10 +8,8 @@ public class ModItemTabInit {
 
     public static final ItemGroup AZCRAY_TAB_MAIN = new ItemGroup("azcray_main_tab") {
 
-        // simple creative tab
-
         @Override
-        public ItemStack makeIcon() {
+        public ItemStack createIcon() {
             return new ItemStack(ModItems.INTERPOLATING_HEART.get());
         }
     };
