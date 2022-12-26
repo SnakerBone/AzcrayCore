@@ -1,10 +1,10 @@
 {
   "homepage": "https://github.com/SnakerBone/AzcrayCore",
-  "1.16.5": {
-    "1.16.5-1.0": "wip"
+  "1.16": {
+    "1.16-1.0": "https://github.com/SnakerBone/AzcrayCore/releases/tag/v1.0-alpha"
   },
   "promos": {
-    "1.16.5-latest": "wip",
-    "1.16.5-recomended": "wip"
+    "1.16-latest": "v1.0-alpha",
+    "1.16-recomended": "v1.0-alpha"
   }
 }
