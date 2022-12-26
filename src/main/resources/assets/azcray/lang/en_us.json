@@ -1,12 +1,10 @@
 {
+  "itemGroup.azcray_main_tab": "Azcray",
   "item.azcray.interpolating_heart": "Interpolating Heart",
   "item.azcray.azcray_heart": "Azcray Heart",
-
-  "item.minecraft.written_book": "Welcome To Azcray",
-
-  "gui.azcray.notification.do_not_the_creature": "§l§5DO NOT THE CREATURE!",
-
-  "itemGroup.azcray_main_tab": "Azcray",
-
-  "effect.azcray.teleport": "Teleport"
+  "status.azcray.low_tier_vanilla_tool": "§4This vanilla tool is not to be used in this modpack!",
+  "status.azcray.low_tier_vanilla_weapon": "§4This vanilla weapon is not to be used in this modpack!",
+  "status.azcray.vanilla_food_consumed": "§4Vanilla food is not to be eaten in this modpack!",
+  "effect.azcray.teleport": "Teleport",
+  "item.minecraft.written_book": "Welcome To Azcray"
 }
