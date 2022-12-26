@@ -11,7 +11,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.16-1.0'
+version = '1.16-1.0-alpha'
 group = 'com.snaker.azcray'
 archivesBaseName = 'azcray'
 
@@ -71,13 +71,13 @@ dependencies {
 jar {
     manifest {
         attributes([
-            "Specification-Title": "azcray",
-            "Specification-Vendor": "azcraysareus",
-            "Specification-Version": "1",
-            "Implementation-Title": project.name,
-            "Implementation-Version": "${version}",
-            "Implementation-Vendor" :"azcraysareus",
-            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+                "Specification-Title"     : "azcray",
+                "Specification-Vendor"    : "azcraysareus",
+                "Specification-Version"   : "1",
+                "Implementation-Title"    : project.name,
+                "Implementation-Version"  : "${version}",
+                "Implementation-Vendor"   : "azcraysareus",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
 }
