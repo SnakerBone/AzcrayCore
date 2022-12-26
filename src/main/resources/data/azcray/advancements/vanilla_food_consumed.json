@@ -3,8 +3,8 @@
     "icon": {
       "item": "azcray:azcray_heart"
     },
-    "title": "I don't feel too great...",
-    "description": "Maybe you should try eating modded food instead?",
+    "title": "Aneurysm",
+    "description": "Vanilla food is boring. Maybe you should try eating modded food instead?",
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
@@ -15,7 +15,7 @@
       "trigger": "minecraft:consume_item",
       "conditions": {
         "items": {
-         "item": "azcray:apple"
+          "item": "azcray:apple"
         }
       }
     },
@@ -318,10 +318,44 @@
   },
   "requirements": [
     [
-      "apple", "mushroom_stew", "bread", "porkchop", "cooked_porkchop", "golden_apple", "enchanted_golden_apple", "cod", "salmon", "tropical_fish",
-      "pufferfish", "cooked_cod", "cooked_salmon", "cookie", "melon_slice", "dried_kelp", "beef", "cooked_beef", "chicken", "cooked_chicken", "rotten_flesh",
-      "carrot", "potato", "baked_potato", "poisonous_potato", "golden_carrot", "pumpkin_pie", "rabbit", "cooked_rabbit", "rabbit_stew", "mutton",
-      "cooked_mutton", "chorus_fruit", "beetroot", "beetroot_soup", "suspicious_stew", "sweet_berries", "honey_bottle"
+      "apple",
+      "mushroom_stew",
+      "bread",
+      "porkchop",
+      "cooked_porkchop",
+      "golden_apple",
+      "enchanted_golden_apple",
+      "cod",
+      "salmon",
+      "tropical_fish",
+      "pufferfish",
+      "cooked_cod",
+      "cooked_salmon",
+      "cookie",
+      "melon_slice",
+      "dried_kelp",
+      "beef",
+      "cooked_beef",
+      "chicken",
+      "cooked_chicken",
+      "rotten_flesh",
+      "carrot",
+      "potato",
+      "baked_potato",
+      "poisonous_potato",
+      "golden_carrot",
+      "pumpkin_pie",
+      "rabbit",
+      "cooked_rabbit",
+      "rabbit_stew",
+      "mutton",
+      "cooked_mutton",
+      "chorus_fruit",
+      "beetroot",
+      "beetroot_soup",
+      "suspicious_stew",
+      "sweet_berries",
+      "honey_bottle"
     ]
   ]
 }

@@ -6,12 +6,9 @@ import net.minecraft.util.LazyValue;
 
 import java.util.function.Supplier;
 
-public enum ModItemTier implements IItemTier {
-
-    // completely destroy vanilla ItemStack mechanics
-
-    ALL(0, 1, 0f, 0f,0, null);
-
+public enum ModItemTier implements IItemTier
+{
+    ALL(0, 1, 0f, 0f, 0, null);
     public final int uses;
     public final float efficiency;
     public final float attackDamage;
@@ -20,7 +17,8 @@ public enum ModItemTier implements IItemTier {
     public final LazyValue<Ingredient> repairMaterial;
 
     ModItemTier(int harvestLevel, int maxUses, float efficiency,
-                float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial) {
+                float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial)
+    {
         this.harvestLevel = harvestLevel;
         this.uses = maxUses;
         this.efficiency = efficiency;
@@ -30,36 +28,38 @@ public enum ModItemTier implements IItemTier {
     }
 
     @Override
-    public int getMaxUses() {
+    public int getMaxUses()
+    {
         return uses;
     }
 
     @Override
-    public float getEfficiency() {
+    public float getEfficiency()
+    {
         return efficiency;
     }
 
     @Override
-    public float getAttackDamage() {
+    public float getAttackDamage()
+    {
         return attackDamage;
     }
 
     @Override
-    public int getHarvestLevel() {
+    public int getHarvestLevel()
+    {
         return harvestLevel;
     }
 
     @Override
-    public int getEnchantability() {
+    public int getEnchantability()
+    {
         return enchantability;
     }
 
     @Override
-    public Ingredient getRepairMaterial() {
+    public Ingredient getRepairMaterial()
+    {
         return repairMaterial.getValue();
     }
 }
-
-
-
-

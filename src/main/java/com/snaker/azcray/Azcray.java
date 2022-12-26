@@ -16,14 +16,12 @@ public class Azcray
     public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "azcray";
 
-    public Azcray() {
+    public Azcray()
+    {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
         ModItems.ITEMS.register(eventBus);
-
         ModOverrideInit.MINECRAFT_ITEM.register(eventBus);
         ModEffectsInit.EFFECTS.register(eventBus);
-
         MinecraftForge.EVENT_BUS.register(this);
     }
 }
