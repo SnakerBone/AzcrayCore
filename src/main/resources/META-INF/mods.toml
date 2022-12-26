@@ -1,25 +1,25 @@
-modLoader="javafml"
-loaderVersion="[36,)"
-license="MIT"
-issueTrackerURL="https://github.com/SnakerBone/AzcrayCore/issues"
+modLoader = "javafml"
+loaderVersion = "[36,)"
+license = "MIT"
+issueTrackerURL = "https://github.com/SnakerBone/AzcrayCore/issues"
 [[mods]]
-modId="azcray"
-version="${file.jarVersion}"
-displayName="Azcray Core"
-updateJSONURL="https://github.com/SnakerBone/AzcrayCore/blob/main/updates.json"
-displayURL="https://github.com/SnakerBone/AzcrayCore"
-logoFile="icon.png"
-authors="SnakerBone"
-description='Core Functionality For Azcray.'
+modId = "azcray"
+version = "${file.jarVersion}"
+displayName = "Azcray Core"
+updateJSONURL = "https://github.com/SnakerBone/AzcrayCore/blob/main/updates.json"
+displayURL = "https://github.com/SnakerBone/AzcrayCore"
+logoFile = "icon.png"
+authors = "SnakerBone"
+description = 'Core Functionality For Azcray.'
 [[dependencies.azcray]]
-    modId="forge"
-    mandatory=true
-    versionRange="[36,)"
-    ordering="NONE"
-    side="BOTH"
+modId = "forge"
+mandatory = true
+versionRange = "[36,)"
+ordering = "NONE"
+side = "BOTH"
 [[dependencies.azcray]]
-    modId="minecraft"
-    mandatory=true
-    versionRange="[1.16,1.17]"
-    ordering="NONE"
-    side="BOTH"
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.16]"
+ordering = "NONE"
+side = "BOTH"
