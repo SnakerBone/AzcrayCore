@@ -1,6 +1,6 @@
 package com.snaker.azcray.events;
 
-import com.snaker.azcray.init.ModEffectsInit;
+import com.snaker.azcray.effect.AzcrayEffects;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.potion.EffectInstance;
@@ -48,7 +48,7 @@ public class VanillaFoodConsumedEvent
             livingEntity.addPotionEffect(new EffectInstance(Effects.DOLPHINS_GRACE, 250, 1));
             livingEntity.addPotionEffect(new EffectInstance(Effects.BAD_OMEN, 250, 1));
             livingEntity.addPotionEffect(new EffectInstance(Effects.HERO_OF_THE_VILLAGE, 250, 1));
-            livingEntity.addPotionEffect(new EffectInstance(ModEffectsInit.TELEPORT.get(), 250, 1));
+            livingEntity.addPotionEffect(new EffectInstance(AzcrayEffects.TELEPORT.get(), 250, 1));
         }
     }
 }
