@@ -1,6 +1,6 @@
 package com.snaker.azcray.item.override;
 
-import com.snaker.azcray.events.VanillaFoodConsumedEvent;
+import com.snaker.azcray.event.VanillaFoodConsumedEvent;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.*;
 import net.minecraft.world.World;

@@ -1,4 +1,4 @@
-package com.snaker.azcray.events;
+package com.snaker.azcray.event;
 
 import com.snaker.azcray.Azcray;
 import net.minecraft.entity.Entity;
@@ -18,7 +18,7 @@ import net.minecraft.world.server.ServerWorld;
 
 import java.util.Map;
 
-public class LowTierVanillaToolUsedEvent
+public class LowTierVanillaWeaponUsedEvent
 {
     public static void executeEvent(Map<String, Object> dependencies)
     {
@@ -26,7 +26,7 @@ public class LowTierVanillaToolUsedEvent
         if(dependencies.get("entity")==null)
         {
             if(!dependencies.containsKey("entity"))
-                Azcray.LOGGER.warn("com.snaker.azcray.events.LowTierVanillaToolUsedEvent load error!");
+                Azcray.LOGGER.warn("com.snaker.azcray.events.LowTierVanillaWeaponUsedEvent load error!");
             return;
         }
         IWorld world = (IWorld) dependencies.get("world");
@@ -37,8 +37,8 @@ public class LowTierVanillaToolUsedEvent
         {
             if(world instanceof ServerWorld)
             {
-                ITextComponent lowTierToolStatus = new TranslationTextComponent("status.azcray.low_tier_vanilla_tool");
-                ((PlayerEntity) livingEntity).sendStatusMessage(lowTierToolStatus, true);
+                ITextComponent lowTierWeaponStatus = new TranslationTextComponent("status.azcray.low_tier_vanilla_weapon");
+                ((PlayerEntity) livingEntity).sendStatusMessage(lowTierWeaponStatus, true);
                 ((PlayerEntity) livingEntity).addPotionEffect(new EffectInstance(Effects.BLINDNESS, 100, 10));
                 ((PlayerEntity) livingEntity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, 100, 10));
                 LightningBoltEntity lightningBoltEntity = EntityType.LIGHTNING_BOLT.create((World) world);
@@ -51,3 +51,4 @@ public class LowTierVanillaToolUsedEvent
         }
     }
 }
+

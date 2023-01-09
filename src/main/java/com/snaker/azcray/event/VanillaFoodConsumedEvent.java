@@ -1,4 +1,4 @@
-package com.snaker.azcray.events;
+package com.snaker.azcray.event;
 
 import com.snaker.azcray.init.EffectInit;
 import net.minecraft.entity.LivingEntity;

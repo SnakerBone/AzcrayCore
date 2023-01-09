@@ -1,6 +1,6 @@
 package com.snaker.azcray.item.override;
 
-import com.snaker.azcray.events.LowTierVanillaWeaponUsedEvent;
+import com.snaker.azcray.event.LowTierVanillaWeaponUsedEvent;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;

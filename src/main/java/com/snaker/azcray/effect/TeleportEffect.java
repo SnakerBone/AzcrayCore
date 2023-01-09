@@ -24,14 +24,14 @@ public class TeleportEffect extends Effect
         {
             if(!livingEntity.world.isRemote)
             {
-                Double posX = livingEntity.getPosX();
-                Double posY = livingEntity.getPosY();
-                Double posZ = livingEntity.getPosZ();
-                Double x_rand = posX+(livingEntity.getRNG().nextDouble()-0.5D)*16.0D;
-                Double y_rand = MathHelper.clamp(posY+
+                double posX = livingEntity.getPosX();
+                double posY = livingEntity.getPosY();
+                double posZ = livingEntity.getPosZ();
+                double x_rand = posX+(livingEntity.getRNG().nextDouble()-0.5D)*16.0D;
+                double y_rand = MathHelper.clamp(posY+
                                 (livingEntity.getRNG().nextInt(16)-8), 0.0D,
                         (livingEntity.world.getHeight()-1));
-                Double z_rand = posZ+(livingEntity.getRNG().nextDouble()-0.5D)*16.0D;
+                double z_rand = posZ+(livingEntity.getRNG().nextDouble()-0.5D)*16.0D;
                 BlockPos finalPos = new BlockPos(x_rand, y_rand, z_rand);
                 if(livingEntity.world.getBlockState(finalPos).getBlock()==Blocks.AIR)
                 {

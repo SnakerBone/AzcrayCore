@@ -1,6 +1,6 @@
 package com.snaker.azcray.item.override;
 
-import com.snaker.azcray.events.LowTierVanillaToolUsedEvent;
+import com.snaker.azcray.event.LowTierVanillaToolUsedEvent;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;

@@ -3,6 +3,7 @@ package com.snaker.azcray;
 import com.snaker.azcray.init.EffectInit;
 import com.snaker.azcray.init.VanillaOverrideInit;
 import com.snaker.azcray.init.ItemInit;
+import com.snaker.azcray.init.SoundEventsInit;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -22,6 +23,7 @@ public class Azcray
         ItemInit.ITEMS.register(eventBus);
         VanillaOverrideInit.MINECRAFT_ITEM.register(eventBus);
         EffectInit.EFFECTS.register(eventBus);
+        SoundEventsInit.SOUND_EVENTS.register(eventBus);
         MinecraftForge.EVENT_BUS.register(this);
     }
 }
