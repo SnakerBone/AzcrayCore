@@ -1,0 +1,11 @@
+{
+  "replace": true,
+  "criteria": {
+    "tick": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "rewards": {
+    "experience": 0
+  }
+}
