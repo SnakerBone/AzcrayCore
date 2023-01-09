@@ -1,8 +1,8 @@
 package com.snaker.azcray;
 
-import com.snaker.azcray.effect.AzcrayEffects;
-import com.snaker.azcray.item.VanillaOverride;
-import com.snaker.azcray.item.AzcrayItems;
+import com.snaker.azcray.init.EffectInit;
+import com.snaker.azcray.init.VanillaOverrideInit;
+import com.snaker.azcray.init.ItemInit;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -19,9 +19,9 @@ public class Azcray
     public Azcray()
     {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        AzcrayItems.ITEMS.register(eventBus);
-        VanillaOverride.MINECRAFT_ITEM.register(eventBus);
-        AzcrayEffects.EFFECTS.register(eventBus);
+        ItemInit.ITEMS.register(eventBus);
+        VanillaOverrideInit.MINECRAFT_ITEM.register(eventBus);
+        EffectInit.EFFECTS.register(eventBus);
         MinecraftForge.EVENT_BUS.register(this);
     }
 }
