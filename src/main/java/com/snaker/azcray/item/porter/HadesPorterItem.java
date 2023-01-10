@@ -1,6 +1,8 @@
-package com.snaker.azcray.item.custom;
+package com.snaker.azcray.item.porter;
 
-import com.snaker.azcray.init.SoundEventsInit;
+import com.snaker.azcray.data.Const;
+import com.snaker.azcray.init.AzcrayItemInit;
+import com.snaker.azcray.init.AzcraySoundEventsInit;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
@@ -19,8 +21,8 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class ChaosPorterItem extends Item {
-    public ChaosPorterItem(Properties properties) {
+public class HadesPorterItem extends Item {
+    public HadesPorterItem(Properties properties) {
         super(properties);
     }
 
@@ -29,7 +31,7 @@ public class ChaosPorterItem extends Item {
     {
         if(Screen.hasShiftDown())
         {
-            tooltip.add(new TranslationTextComponent("tooltip.azcray.chaos_porter"));
+            tooltip.add(new TranslationTextComponent("tooltip.azcray.hades_porter"));
             tooltip.add(new TranslationTextComponent("tooltip.azcray.porter_warning"));
         } else
         {
@@ -40,20 +42,17 @@ public class ChaosPorterItem extends Item {
 
     @Override
     public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand) {
-        ITextComponent wrongDim = new TranslationTextComponent("warn.azcray.porter_end");
+        ITextComponent wrongDim = new TranslationTextComponent("warn.azcray.porter_nether");
         if(!world.isRemote) {
-            int xzRadialBound = 10000;
-            int yLowerBound = 64;
-            int yUpperBound = 70;
+            double posX = world.getRandom().nextInt(Const.SMALL_RADIAL_BOUND);
+            double posY = world.getRandom().nextInt((Const.UPPER_BOUND-Const.LOWER_BOUND)+1)+Const.LOWER_BOUND;
+            double posZ = world.getRandom().nextInt(Const.SMALL_RADIAL_BOUND);
 
-            double posX = world.getRandom().nextInt(xzRadialBound);
-            double posY = world.getRandom().nextInt((yUpperBound-yLowerBound)+1)+yLowerBound;
-            double posZ = world.getRandom().nextInt(xzRadialBound);
-
-            if (world.getDimensionKey() == World.THE_END) {
+            if (world.getDimensionKey() == World.THE_NETHER) {
                 ITextComponent teleportStart = new StringTextComponent("Teleport started!");
                 ITextComponent teleportSuccess = new StringTextComponent("Successfully teleported to "+(int)posX+", "+(int)posY+", "+(int)posZ);
 
+                player.getCooldownTracker().setCooldown(AzcrayItemInit.HADES_PORTER.get(), 200);
                 player.sendMessage(teleportStart, Util.DUMMY_UUID);
 
                 world.removeBlock(new BlockPos(posX, posY, posZ), false);
@@ -62,7 +61,7 @@ public class ChaosPorterItem extends Item {
                 player.teleportKeepLoaded(posX, posY, posZ);
                 player.sendStatusMessage(teleportSuccess, true);
 
-                world.playSound(null, new BlockPos(posX, posY, posZ), SoundEventsInit.PORTER_TELEPORT.get(), SoundCategory.BLOCKS, 1, 1);
+                world.playSound(null, new BlockPos(posX, posY, posZ), AzcraySoundEventsInit.PORTER_TELEPORT.get(), SoundCategory.BLOCKS, 1, 1);
             } else {
                 player.sendStatusMessage(wrongDim, true);
             }

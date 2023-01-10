@@ -1,4 +1,4 @@
-package com.snaker.azcray.item.custom;
+package com.snaker.azcray.item.wip;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.Item;

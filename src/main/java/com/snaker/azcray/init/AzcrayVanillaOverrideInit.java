@@ -6,7 +6,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class VanillaOverrideInit extends Item
+public class AzcrayVanillaOverrideInit extends Item
 {
     public static final DeferredRegister<Item> MINECRAFT_ITEM = DeferredRegister.create(ForgeRegistries.ITEMS, "minecraft");
     // normal food items
@@ -82,7 +82,7 @@ public class VanillaOverrideInit extends Item
     public static final RegistryObject<Item> IRON_HOE = MINECRAFT_ITEM.register("iron_hoe", WeederOverride::new);
     public static final RegistryObject<Item> GOLDEN_HOE = MINECRAFT_ITEM.register("golden_hoe", WeederOverride::new);
 
-    public VanillaOverrideInit(Properties properties)
+    public AzcrayVanillaOverrideInit(Properties properties)
     {
         super(properties);
     }

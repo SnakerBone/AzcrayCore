@@ -1,23 +1,19 @@
-package com.snaker.azcray.item.custom;
+package com.snaker.azcray.item.porter;
 
-import com.snaker.azcray.init.SoundEventsInit;
-import net.minecraft.block.Blocks;
+import com.snaker.azcray.data.Const;
+import com.snaker.azcray.init.AzcrayItemInit;
+import com.snaker.azcray.init.AzcraySoundEventsInit;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.*;
-import net.minecraft.util.datafix.fixes.ChunkPaletteFormat;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.living.EntityTeleportEvent;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -45,18 +41,15 @@ public class GaiaPorterItem extends Item {
     public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand) {
         ITextComponent wrongDim = new TranslationTextComponent("warn.azcray.porter_overworld");
         if(!world.isRemote) {
-            int xzRadialBound = 10000;
-            int yLowerBound = 64;
-            int yUpperBound = 70;
-
-            double posX = world.getRandom().nextInt(xzRadialBound);
-            double posY = world.getRandom().nextInt((yUpperBound-yLowerBound)+1)+yLowerBound;
-            double posZ = world.getRandom().nextInt(xzRadialBound);
+            double posX = world.getRandom().nextInt(Const.SMALL_RADIAL_BOUND);
+            double posY = world.getRandom().nextInt((Const.UPPER_BOUND-Const.LOWER_BOUND)+1)+Const.LOWER_BOUND;
+            double posZ = world.getRandom().nextInt(Const.SMALL_RADIAL_BOUND);
 
             if (world.getDimensionKey() == World.OVERWORLD) {
                 ITextComponent teleportStart = new StringTextComponent("Teleport started!");
                 ITextComponent teleportSuccess = new StringTextComponent("Successfully teleported to "+(int)posX+", "+(int)posY+", "+(int)posZ);
 
+                player.getCooldownTracker().setCooldown(AzcrayItemInit.GAIA_PORTER.get(), 200);
                 player.sendMessage(teleportStart, Util.DUMMY_UUID);
 
                 world.removeBlock(new BlockPos(posX, posY, posZ), false);
@@ -65,7 +58,7 @@ public class GaiaPorterItem extends Item {
                 player.teleportKeepLoaded(posX, posY, posZ);
                 player.sendStatusMessage(teleportSuccess, true);
 
-                world.playSound(null, new BlockPos(posX, posY, posZ), SoundEventsInit.PORTER_TELEPORT.get(), SoundCategory.BLOCKS, 1, 1);
+                world.playSound(null, new BlockPos(posX, posY, posZ), AzcraySoundEventsInit.PORTER_TELEPORT.get(), SoundCategory.BLOCKS, 1, 1);
             } else {
                 player.sendStatusMessage(wrongDim, true);
             }

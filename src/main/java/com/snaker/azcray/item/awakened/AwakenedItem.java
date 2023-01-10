@@ -1,4 +1,4 @@
-package com.snaker.azcray.item.custom;
+package com.snaker.azcray.item.awakened;
 
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.ITooltipFlag;
