@@ -3,6 +3,8 @@ package com.snaker.azcray.init;
 import com.snaker.azcray.data.Const;
 import com.snaker.azcray.item.anthro.AnthropomorphousItem;
 import com.snaker.azcray.item.awakened.AwakenedItem;
+import com.snaker.azcray.item.clover.LuckyCloverItem;
+import com.snaker.azcray.item.clover.UnluckyCloverItem;
 import com.snaker.azcray.item.weapon.CatalysticSwordItem;
 import com.snaker.azcray.tier.AzcrayToolTiers;
 import com.snaker.azcray.item.porter.ChaosPorterItem;
@@ -25,9 +27,9 @@ public class AzcrayItemInit
     public static final RegistryObject<Item> DIMENSIONAL_SHIFTER = ITEMS.register("dimensional_shifter", () ->
             new DimensionalShifterItem(new Item.Properties().group(AzcrayMainItemGroupInit.AZCRAY_MAIN).rarity(Rarity.EPIC).maxStackSize(1)));
     public static final RegistryObject<Item> LUCKY_CLOVER = ITEMS.register("lucky_clover", () ->
-            new WipItem(new Item.Properties().group(AzcrayMainItemGroupInit.AZCRAY_MAIN).maxStackSize(1)));
+            new LuckyCloverItem(new Item.Properties().group(AzcrayMainItemGroupInit.AZCRAY_MAIN).maxStackSize(1)));
     public static final RegistryObject<Item> UNLUCKY_CLOVER = ITEMS.register("unlucky_clover", () ->
-            new WipItem(new Item.Properties().group(AzcrayMainItemGroupInit.AZCRAY_MAIN).maxStackSize(1)));
+            new UnluckyCloverItem(new Item.Properties().group(AzcrayMainItemGroupInit.AZCRAY_MAIN).maxStackSize(1)));
     public static final RegistryObject<Item> FINAL_STAR = ITEMS.register("final_star", () ->
             new WipItem(new Item.Properties().group(AzcrayMainItemGroupInit.AZCRAY_MAIN)));
     public static final RegistryObject<Item> FINAL_STAR_SHARD = ITEMS.register("final_star_shard", () ->

@@ -3,73 +3,44 @@ package com.snaker.azcray.item.override;
 import com.snaker.azcray.event.LowTierVanillaToolUsedEvent;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ShovelItem;
-import net.minecraft.util.SoundEvents;
+import net.minecraft.util.ActionResultType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-import java.util.AbstractMap;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.stream.Stream;
-
 public class ShovelOverride extends ShovelItem
 {
-    public ShovelOverride()
-    {
-        super(ItemTierOverride.ALL, 0, -3f, new Properties().group(ItemGroup.TOOLS));
+    public ShovelOverride() {
+        super(ItemTierOverride.ALL, 1.5f, -3f, new Properties().group(ItemGroup.TOOLS));
     }
 
     @Override
-    public boolean onBlockDestroyed(ItemStack itemStack, World world, BlockState blockState, BlockPos blockPos, LivingEntity livingEntity)
-    {
-        if(!livingEntity.world.isRemote)
-        {
-            itemStack.damageItem(2147483647, livingEntity, (entity) ->
-            {
-                entity.playSound(SoundEvents.ENTITY_ITEM_BREAK, 1f, 1f);
-                entity.sendBreakAnimation(EquipmentSlotType.MAINHAND);
-            });
-            for(int i = 0; i<20; i++)
-            {
-                Double posX = livingEntity.getPosX();
-                Double posY = livingEntity.getPosY();
-                Double posZ = livingEntity.getPosZ();
-                LowTierVanillaToolUsedEvent.executeEvent(Stream.of(
-                        new AbstractMap.SimpleEntry<>("world", livingEntity.world), new AbstractMap.SimpleEntry<>("x", posX),
-                        new AbstractMap.SimpleEntry<>("y", posY),
-                        new AbstractMap.SimpleEntry<>("z", posZ),
-                        new AbstractMap.SimpleEntry<>("entity", livingEntity)).collect(HashMap::new,
-                        (map, entry) -> map.put(entry.getKey(), entry.getValue()), Map::putAll));
+    public ActionResultType onItemUse(ItemUseContext context) {
+        for (int i = 0; i < 20; i++) {
+            LowTierVanillaToolUsedEvent.executeEvent(context.getPlayer(), context.getWorld());
+        }
+        return super.onItemUse(context);
+    }
+
+    @Override
+    public boolean onBlockDestroyed(ItemStack item, World world, BlockState blockState, BlockPos blockPos, LivingEntity entity) {
+        if (entity instanceof PlayerEntity) {
+            for (int i = 0; i < 20; i++) {
+                LowTierVanillaToolUsedEvent.executeEvent((PlayerEntity) entity, world);
             }
         }
-        return true;
+        return super.onBlockDestroyed(item, world, blockState, blockPos, entity);
     }
 
     @Override
-    public boolean hitEntity(ItemStack itemStack, LivingEntity livingEntityTarget, LivingEntity livingEntityAttacker)
-    {
-        if(!livingEntityAttacker.world.isRemote)
-        {
-            itemStack.damageItem(2147483647, livingEntityAttacker, (entity) ->
-            {
-                entity.playSound(SoundEvents.ENTITY_ITEM_BREAK, 1f, 1f);
-                entity.sendBreakAnimation(EquipmentSlotType.MAINHAND);
-            });
-            for(int i = 0; i<20; i++)
-            {
-                Double posX = livingEntityAttacker.getPosX();
-                Double posY = livingEntityAttacker.getPosY();
-                Double posZ = livingEntityAttacker.getPosZ();
-                LowTierVanillaToolUsedEvent.executeEvent(Stream.of(
-                        new AbstractMap.SimpleEntry<>("world", livingEntityAttacker.world), new AbstractMap.SimpleEntry<>("x", posX),
-                        new AbstractMap.SimpleEntry<>("y", posY),
-                        new AbstractMap.SimpleEntry<>("z", posZ),
-                        new AbstractMap.SimpleEntry<>("entity", livingEntityAttacker)).collect(HashMap::new,
-                        (map, entry) -> map.put(entry.getKey(), entry.getValue()), Map::putAll));
+    public boolean hitEntity(ItemStack item, LivingEntity target, LivingEntity attacker) {
+        if (attacker instanceof PlayerEntity) {
+            for (int i = 0; i < 20; i++) {
+                LowTierVanillaToolUsedEvent.executeEvent((PlayerEntity) attacker, attacker.world);
             }
         }
         return true;
