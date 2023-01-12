@@ -11,13 +11,12 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.16-v1.0-alpha'
-group = 'com.snaker.azcray'
-archivesBaseName = 'azcray'
+version = "1.0-alpha-1.16"
+group = "au.com.snaker"
+archivesBaseName = "azcray"
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8)
 
-println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
     mappings channel: 'snapshot', version: '20201028-1.16.3'
     runs {
@@ -25,8 +24,6 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
             mods {
                 azcray {
@@ -71,28 +68,15 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "azcray",
-                "Specification-Vendor"    : "azcraysareus",
-                "Specification-Version"   : "1",
-                "Implementation-Title"    : project.name,
-                "Implementation-Version"  : "${version}",
-                "Implementation-Vendor"   : "azcraysareus",
+                "Specification-Title": "azcray",
+                "Specification-Vendor": "snakerbone",
+                "Specification-Version": "1",
+                "Implementation-Title": "azcray",
+                "Implementation-Version": version,
+                "Implementation-Vendor" : "snakerbone",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
 }
 
 jar.finalizedBy('reobfJar')
-
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            artifact jar
-        }
-    }
-    repositories {
-        maven {
-            url "file:///${project.projectDir}/mcmodsrepo"
-        }
-    }
-}
