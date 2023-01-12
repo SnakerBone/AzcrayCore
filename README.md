@@ -1,5 +1,5 @@
-### Azcray (WIP)
+### Azcray Core (WIP)
 
 <hr>
 
-Todo
+Core Functionality For Azcray
