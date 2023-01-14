@@ -5,7 +5,7 @@ import au.com.snaker.azcray.item.anthro.AnthropomorphousItem;
 import au.com.snaker.azcray.item.awakened.AwakenedItem;
 import au.com.snaker.azcray.item.clover.LuckyCloverItem;
 import au.com.snaker.azcray.item.clover.UnluckyCloverItem;
-import au.com.snaker.azcray.item.weapon.CatalysticSwordItem;
+import au.com.snaker.azcray.item.weapon.FactorialSwordItem;
 import au.com.snaker.azcray.tier.AzcrayToolTiers;
 import au.com.snaker.azcray.item.porter.ChaosPorterItem;
 import au.com.snaker.azcray.item.porter.DimensionalShifterItem;
@@ -64,8 +64,8 @@ public class AzcrayItemInit
             new WipItem(new Item.Properties().group(AzcrayMainItemGroupInit.AZCRAY_MAIN)));
     public static final RegistryObject<Item> CATALYSTIC_INGOT = ITEMS.register("catalystic_ingot", () ->
             new WipItem(new Item.Properties().group(AzcrayMainItemGroupInit.AZCRAY_MAIN)));
-    public static final RegistryObject<Item> CATALYSTIC_SWORD = ITEMS.register("catalystic_sword", () ->
-            new CatalysticSwordItem(AzcrayToolTiers.CATALYSTIC, 3, -2.4f,
+    public static final RegistryObject<Item> FACTORIAL_SWORD = ITEMS.register("factorial_sword", () ->
+            new FactorialSwordItem(AzcrayToolTiers.CATALYSTIC, 3, -2.4f,
                     new Item.Properties().group(AzcrayMainItemGroupInit.AZCRAY_MAIN)));
     public static final RegistryObject<Item> CATALYSTIC_SHOVEL = ITEMS.register("catalystic_shovel", () ->
             new ShovelItem(AzcrayToolTiers.CATALYSTIC, 1.5f, -3f,
