@@ -1,4 +1,4 @@
-### Azcray (WIP)
+### Azcray Core
 
 <hr>
 
