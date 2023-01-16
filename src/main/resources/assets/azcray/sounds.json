@@ -1,9 +1,0 @@
-{
-  "porter_teleport": {
-    "category": "blocks",
-    "subtitle": "subtitle.azcray.porter_teleport",
-    "sounds": [
-      "azcray:porter_teleport"
-    ]
-  }
-}

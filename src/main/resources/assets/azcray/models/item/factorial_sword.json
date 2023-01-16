@@ -1,7 +1,0 @@
-{
-  "parent": "azcray:item/obj",
-  "loader": "forge:obj",
-  "flip-v": true,
-  "ambientToFullbright": false,
-  "model" : "azcray:models/item/factorial_sword.obj"
-}

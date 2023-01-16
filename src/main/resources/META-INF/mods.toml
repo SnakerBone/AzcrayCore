@@ -1,16 +1,16 @@
 modLoader = "javafml"
 loaderVersion = "[36,)"
 license = "NONE"
-issueTrackerURL = "https://github.com/SnakerBone/Azcray/issues"
+issueTrackerURL = "https://github.com/SnakerBone/AzcrayCore/issues"
 
 [[mods]]
 modId = "azcray"
 version = "${file.jarVersion}"
-displayName = "Azcray"
-displayURL = "https://github.com/SnakerBone/Azcray"
+displayName = "Azcray Core"
+displayURL = "https://github.com/SnakerBone/AzcrayCore"
 logoFile = "NONE"
 authors = "SnakerBone"
-description = "A Mod Made For The Azcray Modpack"
+description = "Azcray Core"
 
 [[dependencies.azcray]]
 modId = "forge"
