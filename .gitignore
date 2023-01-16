@@ -19,4 +19,5 @@ run
 
 forge*changelog.txt
 
+gradle.properties
 build.gradle
