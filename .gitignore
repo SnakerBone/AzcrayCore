@@ -4,6 +4,8 @@ bin
 .metadata
 .classpath
 .project
+build.gradle
+gradle.properties
 
 out
 *.ipr
