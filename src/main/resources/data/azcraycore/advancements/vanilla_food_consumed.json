@@ -1,0 +1,361 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:milk_bucket"
+    },
+    "title": "Aneurysm",
+    "description": "Vanilla food is boring. Maybe you should try eating modded food instead?",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/gilded_blackstone.png"
+  },
+  "criteria": {
+    "apple": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:apple"
+        }
+      }
+    },
+    "mushroom_stew": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:mushroom_stew"
+        }
+      }
+    },
+    "bread": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:bread"
+        }
+      }
+    },
+    "porkchop": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:porkchop"
+        }
+      }
+    },
+    "cooked_porkchop": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:cooked_porkchop"
+        }
+      }
+    },
+    "golden_apple": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:golden_apple"
+        }
+      }
+    },
+    "enchanted_golden_apple": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:enchanted_golden_apple"
+        }
+      }
+    },
+    "cod": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:cod"
+        }
+      }
+    },
+    "salmon": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:salmon"
+        }
+      }
+    },
+    "tropical_fish": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:tropical_fish"
+        }
+      }
+    },
+    "pufferfish": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:pufferfish"
+        }
+      }
+    },
+    "cooked_cod": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:cooked_cod"
+        }
+      }
+    },
+    "cooked_salmon": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:cooked_salmon"
+        }
+      }
+    },
+    "cookie": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:cookie"
+        }
+      }
+    },
+    "melon_slice": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:melon_slice"
+        }
+      }
+    },
+    "dried_kelp": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:dried_kelp"
+        }
+      }
+    },
+    "beef": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:beef"
+        }
+      }
+    },
+    "cooked_beef": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:cooked_beef"
+        }
+      }
+    },
+    "chicken": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:chicken"
+        }
+      }
+    },
+    "cooked_chicken": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:cooked_chicken"
+        }
+      }
+    },
+    "rotten_flesh": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:rotten_flesh"
+        }
+      }
+    },
+    "carrot": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:carrot"
+        }
+      }
+    },
+    "potato": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:potato"
+        }
+      }
+    },
+    "baked_potato": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:baked_potato"
+        }
+      }
+    },
+    "poisonous_potato": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:poisonous_potato"
+        }
+      }
+    },
+    "golden_carrot": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:golden_carrot"
+        }
+      }
+    },
+    "pumpkin_pie": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:pumpkin_pie"
+        }
+      }
+    },
+    "rabbit": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:rabbit"
+        }
+      }
+    },
+    "cooked_rabbit": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:cooked_rabbit"
+        }
+      }
+    },
+    "rabbit_stew": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:rabbit_stew"
+        }
+      }
+    },
+    "mutton": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:mutton"
+        }
+      }
+    },
+    "cooked_mutton": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:cooked_mutton"
+        }
+      }
+    },
+    "chorus_fruit": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:chorus_fruit"
+        }
+      }
+    },
+    "beetroot": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:beetroot"
+        }
+      }
+    },
+    "beetroot_soup": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:beetroot_soup"
+        }
+      }
+    },
+    "suspicious_stew": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:suspicious_stew"
+        }
+      }
+    },
+    "sweet_berries": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:sweet_berries"
+        }
+      }
+    },
+    "honey_bottle": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": "azcraycore:honey_bottle"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "apple",
+      "mushroom_stew",
+      "bread",
+      "porkchop",
+      "cooked_porkchop",
+      "golden_apple",
+      "enchanted_golden_apple",
+      "cod",
+      "salmon",
+      "tropical_fish",
+      "pufferfish",
+      "cooked_cod",
+      "cooked_salmon",
+      "cookie",
+      "melon_slice",
+      "dried_kelp",
+      "beef",
+      "cooked_beef",
+      "chicken",
+      "cooked_chicken",
+      "rotten_flesh",
+      "carrot",
+      "potato",
+      "baked_potato",
+      "poisonous_potato",
+      "golden_carrot",
+      "pumpkin_pie",
+      "rabbit",
+      "cooked_rabbit",
+      "rabbit_stew",
+      "mutton",
+      "cooked_mutton",
+      "chorus_fruit",
+      "beetroot",
+      "beetroot_soup",
+      "suspicious_stew",
+      "sweet_berries",
+      "honey_bottle"
+    ]
+  ]
+}

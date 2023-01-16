@@ -4,7 +4,7 @@ license = "NONE"
 issueTrackerURL = "https://github.com/SnakerBone/AzcrayCore/issues"
 
 [[mods]]
-modId = "azcray"
+modId = "azcraycore"
 version = "${file.jarVersion}"
 displayName = "Azcray Core"
 displayURL = "https://github.com/SnakerBone/AzcrayCore"
@@ -12,14 +12,14 @@ logoFile = "NONE"
 authors = "SnakerBone"
 description = "Azcray Core"
 
-[[dependencies.azcray]]
+[[dependencies.azcraycore]]
 modId = "forge"
 mandatory = true
 versionRange = "[36,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.azcray]]
+[[dependencies.azcraycore]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[1.16,)"

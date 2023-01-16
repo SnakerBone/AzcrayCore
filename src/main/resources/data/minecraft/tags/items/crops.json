@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "azcray:carrot",
-    "azcray:beetroot",
-    "azcray:potato"
+    "azcraycore:carrot",
+    "azcraycore:beetroot",
+    "azcraycore:potato"
   ]
 }
