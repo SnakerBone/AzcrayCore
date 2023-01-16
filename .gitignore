@@ -6,6 +6,8 @@ bin
 .project
 build.gradle
 gradle.properties
+gradlew
+gradlew.bat
 
 out
 *.ipr
