@@ -2,20 +2,16 @@ package au.com.snaker.azcray.util;
 
 import au.com.snaker.azcray.data.Const;
 import au.com.snaker.azcray.data.Maths;
-import net.minecraft.client.Minecraft;
-import net.minecraft.entity.Entity;
+import au.com.snaker.azcray.init.AzcrayEffectInit;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.world.World;
 
-import java.util.Arrays;
 import java.util.List;
-import java.util.function.Consumer;
 
 public class AttackTypeUtil {
     public static void attackAOE(PlayerEntity player) {
@@ -34,7 +30,7 @@ public class AttackTypeUtil {
             float damage = Maths.generateFactorial(toAttack.size());
 
             for (LivingEntity entity : toAttack) {
-                entity.addPotionEffect(new EffectInstance(Effects.WITHER, 100, 1));
+                entity.addPotionEffect(new EffectInstance(AzcrayEffectInit.TELEPORT.get(), 100, 1));
                 entity.attackEntityFrom(source, damage);
             }
         }
