@@ -18,3 +18,5 @@ eclipse
 run
 
 forge*changelog.txt
+
+build.gradle
