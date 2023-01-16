@@ -5,6 +5,7 @@ bin
 .classpath
 .project
 
+# my minecraft auth credentials for dev env are hardcoded in these these files cant reveal that sorry! will change this later
 build.gradle
 gradle.properties
 gradlew
