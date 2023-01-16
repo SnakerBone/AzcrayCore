@@ -4,6 +4,8 @@ bin
 .metadata
 .classpath
 .project
+build.gradle
+gradle.properties
 
 out
 *.ipr
@@ -18,6 +20,3 @@ eclipse
 run
 
 forge*changelog.txt
-
-gradle.properties
-build.gradle
