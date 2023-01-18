@@ -17,8 +17,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 @Mod(Const.MOD_ID)
-public class AzcrayCore
-{
+public class AzcrayCore {
     public static final Logger LOGGER = LogManager.getLogger();
 
     public AzcrayCore()
