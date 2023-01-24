@@ -2,8 +2,10 @@
 
 <hr>
 
-A mod to make minecraft as dogshit as possible (for a modpack im working on)
+### What is this?
+
+This is a mod to make minecraft as dogshit as possible, it is for a modpack I am currently working on
 
 ### What does 'Azcray' mean?
 
-Azcray is pig latin for crazy, I think this is self explanatory lol 
+Azcray is pig latin for the word crazy
